@@ -1,0 +1,21 @@
+{
+  "name": "jsExcel",
+  "version": "1.0.0",
+  "description": "jsexcel xlsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npm install",
+    "start": "http-server -a 0.0.0.0 -p 8001 -c-1 -o",
+    "postinstall": "bower install"
+  },
+  "keywords": [
+    "jsexcel",
+    "xlsx"
+  ],
+  "author": "fun",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.8.0"
+  },
+  "dependencies": {}
+}

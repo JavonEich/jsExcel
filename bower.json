@@ -1,0 +1,23 @@
+{
+  "name": "jsExcel",
+  "version": "0.0.0",
+  "authors": [
+    "vincezhang01@gmail.com"
+  ],
+  "description": "jsexcel xlsx",
+  "keywords": [
+    "jsexcel",
+    "xlsx"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "js-xlsx": "~0.8.0"
+  }
+}

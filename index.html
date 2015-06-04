@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title></title>
+</head>
+<body>
+<div><span>列名：</span><input type="text" id="col" value="商品简称"/></div>
+<div><span>筛选：</span><input type="text" id="find" value="晨光"/></div>
+<br/>
+<div><input type="file" id="files"/></div>
+<div style="margin-top: 20px;"><button id="import">Import</button></div>
+<div style="margin-top: 20px;"><button id="export">Export</button></div>
+<pre id="out"></pre>
+<!--<script src="bower_components/js-xlsx/dist/jszip.js"></script>-->
+<!--<script src="bower_components/js-xlsx/dist/xlsx.js"></script>-->
+<script src="bower_components/js-xlsx/dist/xlsx.core.min.js"></script>
+<script src="js/FileSaver.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
