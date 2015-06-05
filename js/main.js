@@ -7,6 +7,7 @@
         exExport = document.getElementById("export"),
         colName = document.getElementById("col"),
         find = document.getElementById("find"),
+        tip = document.getElementById("tip"),
         re=/.(xlsx|XLSX)$/,
         file, f, colNameVal, findVal, exportData;
 
@@ -19,6 +20,7 @@
         findVal = find.value;
         if(re.test(f.name)){
             console.log("import:"+(new Date()));
+            tip.innerHTML = "导入......";
             excelImport(f);
         }else{
             alert("文件格式须为xlsx");
@@ -37,6 +39,7 @@
             else{
                 out.innerText = output;
             }
+            tip.innerHTML = "导入完成";
         }
         reader.readAsArrayBuffer(f);
     }
@@ -70,6 +73,8 @@
     }
     //*********************************************
     exExport.addEventListener("click", function(){
+        console.log("export:"+(new Date()));
+        tip.innerHTML = "导出......";
         excelExport(exportData);
     }, false);
     function excelExport(data){
@@ -84,7 +89,7 @@
         }
         wbOut = XLSX.write(wb, {bookType: "xlsx", bookSST: true, type: "binary"});
         saveAs(new Blob([s2ab(wbOut)], {type: "application/octet-stream"}), (+new Date()) + ".xlsx");
-
+        tip.innerHTML = "导出完成";
         //保存为json
         //saveAs(new Blob([JSON.stringify(data)], {type: "text/plain;charset=UTF-8"}), "json"+(+new Date())+".txt");
     }
@@ -95,13 +100,11 @@
         this.Sheets = {};
     }
     function sheet_from_array_of_arrays(data){
-        //console.log(data);
         var ws = {};
         var range = {s: {c: 10000000, r: 10000000}, e: {c: 0, r: 0}};
         for(var R = 0; R != data.length; ++R){
             var C = 0;
             for(var val in data[R]) {
-                //console.log(data[R][val]);
                 if (range.s.r > R)
                     range.s.r = R;
                 if (range.s.c > C)
