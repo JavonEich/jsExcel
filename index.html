@@ -7,15 +7,16 @@
     <title></title>
 </head>
 <body>
-<div><span>列名：</span><input type="text" id="col" value="商品简称"/></div>
-<div><span>筛选：</span><input type="text" id="find" value="晨光"/></div>
+<div><span>列名：</span><input type="text" id="col" value=""/></div>
+<div><span>筛选：</span><input type="text" id="find" value=""/></div>
+<div><span>行筛选：</span><input type="text" id="rowFind" value=""/><button id="startFind">查找</button></div>
 <br/>
 <div><input type="file" id="files"/></div>
 <div style="margin-top: 20px;"><button id="import">Import</button></div>
 <div style="margin-top: 20px;"><button id="export">Export</button></div>
 <p id="tip"></p>
 <pre id="out"></pre>
-<script src="bower_components/js-xlsx/dist/xlsx.core.min.js"></script>
+<script src="bower_components/js-xlsx/js-xlsx-0.8.0/dist/xlsx.core.min.js"></script>
 <script src="js/FileSaver.js"></script>
 <script src="js/main.js"></script>
 </body>

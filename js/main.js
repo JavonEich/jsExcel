@@ -8,6 +8,8 @@
         colName = document.getElementById("col"),
         find = document.getElementById("find"),
         tip = document.getElementById("tip"),
+        rowFind = document.getElementById("rowFind"),
+        startFind = document.getElementById("startFind"),
         re=/.(xlsx|XLSX)$/,
         file, f, colNameVal, findVal, exportData;
 
